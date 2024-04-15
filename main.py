@@ -2,11 +2,16 @@ import tkinter as tk
 from tkinter import messagebox
 from text_handling import TextBase
 
+############################## GLOBAL VARIABLES ##############################
+BG_COLOR = "#EA738D"
+
+##########################################################################################
+
 text_base = TextBase()
 
 # Create the main window
 root = tk.Tk()
-root.configure(bg="#EA738D")
+root.configure(bg=BG_COLOR)
 
 ############################## Timer ##############################
 def update_timer():
@@ -40,7 +45,7 @@ def submit_text():
 label = tk.Label(root, 
                  text=text_base.generate_sentence(), 
                  font=("Helvetica", 16, "bold"),  # Set font style, size, and weight
-                 bg="#EA738D",                      # Set background color to yellow
+                 bg=BG_COLOR,                      # Set background color to yellow
                  justify="center"                 # Center-align the text
                 )
 label.grid(row=1, column=1)
